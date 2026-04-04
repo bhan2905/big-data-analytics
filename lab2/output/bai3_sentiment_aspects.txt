@@ -1,0 +1,2 @@
+positive	HOTEL	2942
+negative	ROOMS	515
