@@ -1,0 +1,12 @@
+Genre: Action, Average ratings: 3.71
+Genre: Adventure, Average ratings: 3.63
+Genre: Biography, Average ratings: 3.56
+Genre: Crime, Average ratings: 3.81
+Genre: Drama, Average ratings: 3.76
+Genre: Family, Average ratings: 3.67
+Genre: Fantasy, Average ratings: 3.86
+Genre: Film-Noir, Average ratings: 4.36
+Genre: Horror, Average ratings: 4.00
+Genre: Mystery, Average ratings: 4.00
+Genre: Sci-Fi, Average ratings: 3.73
+Genre: Thriller, Average ratings: 3.70

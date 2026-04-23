@@ -1,0 +1,19 @@
+ID: 1010, Title: Lawrence of Arabia (1962), Average ratings: 3.44, Count: 18
+ID: 1012, Title: Psycho (1960), Average ratings: 4.00, Count: 2
+ID: 1013, Title: The Godfather: Part II (1974), Average ratings: 4.00, Count: 17
+ID: 1015, Title: Sunset Boulevard (1950), Average ratings: 4.36, Count: 7
+ID: 1020, Title: E.T. the Extra-Terrestrial (1982), Average ratings: 3.67, Count: 18
+ID: 1025, Title: The Terminator (1984), Average ratings: 4.06, Count: 18
+ID: 1028, Title: Fight Club (1999), Average ratings: 3.50, Count: 7
+ID: 1030, Title: The Silence of the Lambs (1991), Average ratings: 3.14, Count: 7
+ID: 1037, Title: The Lord of the Rings: The Fellowship of the Ring (2001), Average ratings: 3.89, Count: 18
+ID: 1039, Title: The Lord of the Rings: The Return of the King (2003), Average ratings: 3.82, Count: 11
+ID: 1040, Title: Gladiator (2000), Average ratings: 3.61, Count: 18
+ID: 1043, Title: No Country for Old Men (2007), Average ratings: 3.89, Count: 18
+ID: 1047, Title: The Social Network (2010), Average ratings: 3.86, Count: 7
+ID: 1050, Title: Mad Max: Fury Road (2015), Average ratings: 3.47, Count: 18
+Movie with the highest average rating with at least 5 ratings:
+- ID: 1015
+- Title: Sunset Boulevard (1950)
+- Average ratings: 4.36
+- Count: 7

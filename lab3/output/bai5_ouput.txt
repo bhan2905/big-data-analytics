@@ -1,0 +1,14 @@
+ID: 1, Occupation: Programmer, Average rating: 4.25, Count: 10
+ID: 2, Occupation: Doctor, Average rating: 3.69, Count: 21
+ID: 3, Occupation: Engineer, Average rating: 3.56, Count: 18
+ID: 4, Occupation: Teacher, Average rating: 3.70, Count: 5
+ID: 5, Occupation: Lawyer, Average rating: 3.65, Count: 17
+ID: 6, Occupation: Artist, Average rating: 3.73, Count: 11
+ID: 7, Occupation: Manager, Average rating: 3.47, Count: 16
+ID: 8, Occupation: Nurse, Average rating: 3.86, Count: 11
+ID: 9, Occupation: Salesperson, Average rating: 3.65, Count: 17
+ID: 10, Occupation: Accountant, Average rating: 3.58, Count: 6
+ID: 11, Occupation: Journalist, Average rating: 3.85, Count: 17
+ID: 12, Occupation: Designer, Average rating: 4.00, Count: 13
+ID: 14, Occupation: Consultant, Average rating: 3.86, Count: 14
+ID: 15, Occupation: Student, Average rating: 4.00, Count: 8
