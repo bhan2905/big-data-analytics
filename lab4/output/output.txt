@@ -1,0 +1,254 @@
+
+- Ex1: Schema information-
+root
+ |-- Customer_Trx_ID: string (nullable = true)
+ |-- Subscriber_ID: string (nullable = true)
+ |-- Subscribe_Date: date (nullable = true)
+ |-- First_Order_Date: date (nullable = true)
+ |-- Customer_Postal_Code: string (nullable = true)
+ |-- Customer_City: string (nullable = true)
+ |-- Customer_Country: string (nullable = true)
+ |-- Customer_Country_Code: string (nullable = true)
+ |-- Age: integer (nullable = true)
+ |-- Gender: string (nullable = true)
+
+root
+ |-- Order_ID: string (nullable = true)
+ |-- Customer_Trx_ID: string (nullable = true)
+ |-- Order_Status: string (nullable = true)
+ |-- Order_Purchase_Timestamp: timestamp (nullable = true)
+ |-- Order_Approved_At: timestamp (nullable = true)
+ |-- Order_Delivered_Carrier_Date: timestamp (nullable = true)
+ |-- Order_Delivered_Customer_Date: timestamp (nullable = true)
+ |-- Order_Estimated_Delivery_Date: timestamp (nullable = true)
+
+root
+ |-- Order_ID: string (nullable = true)
+ |-- Order_Item_ID: integer (nullable = true)
+ |-- Product_ID: string (nullable = true)
+ |-- Seller_ID: string (nullable = true)
+ |-- Shipping_Limit_Date: timestamp (nullable = true)
+ |-- Price: double (nullable = true)
+ |-- Freight_Value: double (nullable = true)
+
+root
+ |-- Review_ID: string (nullable = true)
+ |-- Order_ID: string (nullable = true)
+ |-- Review_Score: string (nullable = true)
+ |-- Review_Comment_Title_En: string (nullable = true)
+ |-- Review_Comment_Message_En: string (nullable = true)
+ |-- Review_Creation_Date: string (nullable = true)
+ |-- Review_Answer_Timestamp: timestamp (nullable = true)
+
+root
+ |-- Product_ID: string (nullable = true)
+ |-- Product_Category_Name: string (nullable = true)
+ |-- Product_Weight_Gr: integer (nullable = true)
+ |-- Product_Length_Cm: integer (nullable = true)
+ |-- Product_Height_Cm: integer (nullable = true)
+ |-- Product_Width_Cm: integer (nullable = true)
+
+
+- Ex2: Overall statistics for total orders, customers and sellers -
++------------+----------------+--------------+
+|Total_Orders|Unique_Customers|Unique_Sellers|
++------------+----------------+--------------+
+|       99441|           99441|          3095|
++------------+----------------+--------------+
+
+
+- Ex3: Order count by Country (Descending) -
++----------------+-----------+
+|Customer_Country|Order_Count|
++----------------+-----------+
+|         Germany|      41754|
+|          France|      12848|
+|     Netherlands|      11629|
+|         Belgium|       5464|
+|         Austria|       5043|
+|     Switzerland|       3640|
+|  United Kingdom|       3382|
+|          Poland|       2139|
+|         Czechia|       2034|
+|           Italy|       2025|
+|           Spain|       1651|
+|        Portugal|       1336|
+|          Sweden|        975|
+|         Denmark|        905|
+|          Serbia|        746|
+|          Norway|        716|
+|        Slovakia|        534|
+|        Slovenia|        495|
+|          Turkey|        485|
+|          Greece|        412|
++----------------+-----------+
+only showing top 20 rows
+
+
+- Ex4: Order count by Time (Year Asc, Month Desc) -
++----+-----+-----------+
+|Year|Month|Order_Count|
++----+-----+-----------+
+|2022|   12|          1|
+|2022|   10|        324|
+|2022|    9|          4|
+|2023|   12|       5673|
+|2023|   11|       7544|
+|2023|   10|       4631|
+|2023|    9|       4285|
+|2023|    8|       4331|
+|2023|    7|       4026|
+|2023|    6|       3245|
+|2023|    5|       3700|
+|2023|    4|       2404|
+|2023|    3|       2682|
+|2023|    2|       1780|
+|2023|    1|        800|
+|2024|   10|          4|
+|2024|    9|         16|
+|2024|    8|       6512|
+|2024|    7|       6292|
+|2024|    6|       6167|
++----+-----+-----------+
+only showing top 20 rows
+
+
+- Ex5: Review score statistics -
+
+ Review Distribution (1 to 5 Stars):
++------------+------------+
+|Review_Score|Review_Count|
++------------+------------+
+|           1|       11424|
+|           2|        3151|
+|           3|        8179|
+|           4|       19141|
+|           5|       57328|
++------------+------------+
+
+
+ Overall Average Score: 4.0864214950162765
+
+- Ex6: Total revenue in 2024 by Product Category -
++-------------------------------+------------------+
+|Product_Category_Name          |Total_Revenue     |
++-------------------------------+------------------+
+|Health_Beauty                  |885191.1200000007 |
+|Watches_Gifts                  |771986.7499999991 |
+|Bed_Bath_Table                 |650794.6999999994 |
+|Sports_Leisure                 |621999.3399999996 |
+|Computers_Accessories          |594771.0400000003 |
+|Housewares                     |491576.9600000005 |
+|Furniture_Decor                |476466.12999999983|
+|Auto                           |404210.56999999995|
+|Baby                           |299052.56000000006|
+|Cool_Stuff                     |273910.05000000005|
+|Garden_Tools                   |259068.31999999983|
+|Telephony                      |217452.12999999963|
+|Perfumery                      |204562.53999999986|
+|Toys                           |200634.06999999998|
+|Office_Furniture               |181745.7300000001 |
+|Stationery                     |164743.85         |
+|Pet_Shop                       |152804.93999999992|
+|Construction_Tools_Construction|141187.34         |
+|Electronics                    |134265.45000000007|
+|Musical_Instruments            |121476.31000000001|
++-------------------------------+------------------+
+only showing top 20 rows
+
+
+- Ex7: Top selling product and product average review scores -
+Top selling product: Product ID = aca2eb7d00ea1a7b8ebd4e68314663af | Total Items = 527
+
+Product leaderboard:
++--------------------------------+-----------+--------------------+
+|Product_ID                      |Total_Items|Average_Review_Score|
++--------------------------------+-----------+--------------------+
+|e9f5d10b74f0589a7d327eff4bdd6b04|1          |5.0                 |
+|8c5af0747c457be38b6147250a5a5487|2          |5.0                 |
+|a9fa0428bc677ac4d0a948fe2982ad1d|3          |5.0                 |
+|0116f3b947377cccf0135f8071b54d74|1          |5.0                 |
+|d425f8ccf937bdc4c55eb96ef872d812|1          |5.0                 |
+|bb819359cc1d57dab4210c9c8640d2b8|1          |5.0                 |
+|840b41c3044d2b09db4933d48cffa924|2          |5.0                 |
+|5c699beec1e114bd15b35cf8d01ec6b5|1          |5.0                 |
+|53e8156b28f9080cc0865b55d1bed9fe|1          |5.0                 |
+|77b91313bf9acf3eabf9abc503d99366|1          |5.0                 |
+|290ada89b05e1dca2a4fe42f1cfc012e|2          |5.0                 |
+|fddc61a36e83f12b665d068c07411aa7|1          |5.0                 |
+|0992c6cba95a13bfa68ea7d5e22d478b|3          |5.0                 |
+|a3cc2811456002f4baf5a88ab9ff3427|2          |5.0                 |
+|3154b455f8ac2cef3be89aae6badd2c8|1          |5.0                 |
+|ba0d049a05e69aa1b806f625df623063|1          |5.0                 |
+|90509918fbc0f45016520d833ae25f78|2          |5.0                 |
+|d0d132ac4a5d20f11e05ffd8ca3d2e3f|1          |5.0                 |
+|e2a5fbcec3cf55f09968fb1ecbe16638|1          |5.0                 |
+|6ef8c8d7d06c5dca94963e77ccd20778|2          |5.0                 |
++--------------------------------+-----------+--------------------+
+only showing top 20 rows
+
+
+- Ex8: Delivery Performance -
++---------------+-----------+-------------------+--------------+--------------+
+|Shipping_Status|Order_Count|Average_Delay_Days |Max_Delay_Days|Min_Delay_Days|
++---------------+-----------+-------------------+--------------+--------------+
+|Delayed        |6535       |10.640856924254017 |188           |1             |
+|On-Time        |89941      |-13.546580536129241|0             |-147          |
++---------------+-----------+-------------------+--------------+--------------+
+
+
+- Ex9: Customer Behavior -
++--------------------------------+------------+-------------------+-------------+------------------+
+|Customer_Trx_ID                 |Total_Orders|Average_Order_Value|Active_Months|Purchase_Frequency|
++--------------------------------+------------+-------------------+-------------+------------------+
+|0721e1c4b91bc6ded6579edace8659d3|1           |107.78             |1.0          |1.0               |
+|36a1aa63bf2ebcd4911e026092700610|1           |98.8               |1.0          |1.0               |
+|80447be02d8f3f3f309c7df938a08501|1           |41.0               |1.0          |1.0               |
+|72ecfc69f7d90359d9bbf70530a340c7|1           |185.35             |1.0          |1.0               |
+|6f8b4eeaba59ef3fac7b5cbddf1a8493|1           |272.63             |1.0          |1.0               |
+|a56b03f5e6015f1a502b9810309b98b7|1           |69.49              |1.0          |1.0               |
+|42da09831872a4eccdffae262281876d|1           |88.83              |1.0          |1.0               |
+|6f804e6a8f98ba0d151e10eccaf1ba7b|1           |47.589999999999996 |1.0          |1.0               |
+|da14d636fdbf0cf7f7c9da5967eb7f0f|1           |47.22              |1.0          |1.0               |
+|c920352ccf11e554a9981c919c5f8cad|1           |75.07              |1.0          |1.0               |
+|6442504c76c94895e7a26f621fa42b8f|1           |73.34              |1.0          |1.0               |
+|c0fe0fbc24994167dce810f83cb96890|1           |63.99              |1.0          |1.0               |
+|e139948a02a65f3d63dca4169cd990b8|1           |140.62             |1.0          |1.0               |
+|0cb635404b8b41e8351ae5578711143b|1           |201.04             |1.0          |1.0               |
+|9a5d390630499694895f2d2357a9967e|1           |243.56             |1.0          |1.0               |
+|0b60138b038f460baefa261d66dac712|1           |87.39              |1.0          |1.0               |
+|6e48d7670ed33717bfa54a210ca49c35|1           |138.68             |1.0          |1.0               |
+|82c91e8e62d9d79bfcf9af9a447c5dfa|1           |210.29000000000002 |1.0          |1.0               |
+|e9a66026ced6c5bad4c9a78e61371c18|1           |270.55             |1.0          |1.0               |
+|87bc0b31db47421f9c67a12145740887|1           |230.64999999999998 |1.0          |1.0               |
++--------------------------------+------------+-------------------+-------------+------------------+
+only showing top 20 rows
+
+
+- Ex10: Seller Performance Ranking -
++-----------+--------------------------------+------------------+------------+
+|Seller_Rank|Seller_ID                       |Total_Revenue     |Total_Orders|
++-----------+--------------------------------+------------------+------------+
+|1          |4869f7a5dfa277a7dca6462dcf3b52b2|249640.69999999998|1132        |
+|2          |7c67e1448b00f6e969d365cea6b010ab|239536.44         |982         |
+|3          |53243585a1d6dc2643021fd1853d8905|235856.67999999996|358         |
+|4          |4a3ca9315b744ce9f8e9374361493884|235539.95999999985|1806        |
+|5          |fa1c13f2614d7b5c4749cbc52fecda94|204084.73         |585         |
+|6          |da8622b14eb17ae2831f4ac5b9dab84a|185192.32         |1314        |
+|7          |7e93a43ef30c4f03f38b393420bc753a|182754.05         |336         |
+|8          |1025f0e2d44d7041d6cf58b6550e0bfa|172860.69000000003|915         |
+|9          |7a67c85e85bb2ce8582c35f2203ad736|162648.38000000003|1160        |
+|10         |955fee9216a65b617aa5c0531780ce60|160602.68000000005|1287        |
+|11         |6560211a19b47992c3666cc44a7e94c0|151265.76999999984|1854        |
+|12         |1f50f920176fa81dab994f9023523100|142104.97999999995|1404        |
+|13         |46dc3b2cc0980fb8ec44634e21d2718e|139909.69         |521         |
+|14         |a1043bafd471dff536d0c462352beb48|133745.25         |718         |
+|15         |cc419e0650a3c5ba77189a1882b7556a|129957.40999999989|1706        |
+|16         |620c87c171fb2a6dd6e8bb4dec959fc6|128909.70999999999|740         |
+|17         |5dceca129747e92ff8ef7a997dc4f8ca|125816.92000000001|325         |
+|18         |7d13fca15225358621be4086e1eb0964|122261.02000000002|565         |
+|19         |3d871de0142ce09b7081e2b9d1733cb1|117347.70999999992|1080        |
+|20         |edb1ef5e36e0c8cd84eb3c9b003e486d|83189.65          |166         |
++-----------+--------------------------------+------------------+------------+
+only showing top 20 rows
+
